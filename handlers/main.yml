@@ -16,7 +16,7 @@
 
 - name: check nginx configuration
   become: yes
-  become_method: sudo
+  become_method: sudo # run as sudo
   command: "{{ nginx_binary_name }} -t"
   register: result
   changed_when: "result.rc != 0"
